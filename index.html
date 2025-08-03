@@ -89,23 +89,30 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <div id="contact-content" style="display: none;">
-        <h2>Contact Me</h2>
-        <form>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required><br>
+<section id="contact">
+  <div id="contact-content" style="display: none;">
+    <h2>Contact Me</h2>
+    <p><strong>Name:</strong> Ruth Osoro</p>
+    <p><strong>Email:</strong> ruthosoro2@gmail.com</p>
+    <p><strong>Phone:</strong> +254795123988</p>
 
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br>
+    <button onclick="toggleSection('form-content')">Open Form</button>
+    <div id="form-content" style="display: none;">
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
 
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="5" required></textarea><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
 
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   </main>
 
