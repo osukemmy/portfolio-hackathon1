@@ -68,3 +68,24 @@ footer {
   color: white;
   margin-top: 20px;
 }
+/* Hero / Landing Section */
+#hero {
+  background-color: #f0f8ff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 2px solid #4CAF50;
+}
+
+#hero h2 {
+  color: #4CAF50;
+  font-size: 2em;
+}
+
+#hero p {
+  font-size: 1.2em;
+  color: #333;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
