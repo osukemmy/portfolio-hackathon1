@@ -99,7 +99,7 @@
       </div>
     </section>
 
-  <!-- Contact -->
+ <!-- Contact -->
 <section id="contact">
   <div id="contact-content">
     <h2>Contact Me</h2>
@@ -110,8 +110,8 @@
     <!-- Button to toggle the form -->
     <button type="button" onclick="toggleForm()">Open Form</button>
 
-    <!-- The form is hidden by default -->
-    <div id="form-content" style="display:none; margin-top:15px;">
+    <!-- The form is hidden by default using CSS -->
+    <div id="form-content">
       <form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br>
@@ -154,14 +154,11 @@
   }
 
   // Toggles ONLY the contact form
-  function toggleForm() {
-    const form = document.getElementById('form-content');
-    if (form.style.display === 'none' || form.style.display === '') {
-      form.style.display = 'block';
-    } else {
-      form.style.display = 'none';
-    }
-  }
+function toggleForm() {
+  const form = document.getElementById('form-content');
+  form.classList.toggle('show');
+}
+
 </script>
 
 </body>

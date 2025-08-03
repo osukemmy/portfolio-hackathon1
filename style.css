@@ -89,17 +89,21 @@ footer {
   margin: 10px auto 0;
 }
 
-/* Smooth transition for dropdown content */
-main section div {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 0 10px;
-}
-
 /* When visible */
 main section div.show {
   max-height: 500px; /* Adjust height to fit content */
+  padding: 10px;
+}
+
+/* Ensure form-content is collapsed like other sections */
+#form-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+#form-content.show {
+  max-height: 500px;
   padding: 10px;
 }
 
