@@ -99,7 +99,7 @@
       </div>
     </section>
 
-   <!-- Contact -->
+  <!-- Contact -->
 <section id="contact">
   <div id="contact-content">
     <h2>Contact Me</h2>
@@ -109,7 +109,9 @@
 
     <!-- Button to toggle the form -->
     <button type="button" onclick="toggleForm()">Open Form</button>
-    <div id="form-content" style="display:none;">
+
+    <!-- The form is hidden by default -->
+    <div id="form-content" style="display:none; margin-top:15px;">
       <form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br>
@@ -124,8 +126,7 @@
       </form>
     </div>
   </div>
-</section>  
-
+</section>
 </main>
 
 <footer>
@@ -133,6 +134,7 @@
 </footer>
 
 <script>
+  // Toggles main sections
   function toggleSection(id) {
     const allSections = document.querySelectorAll('main section div');
 
@@ -144,7 +146,6 @@
 
     const section = document.getElementById(id);
 
-    // Toggle 'show' class to open/close with animation
     if (section.classList.contains('show')) {
       section.classList.remove('show');
     } else {
@@ -152,13 +153,14 @@
     }
   }
 
-  // New function for toggling the contact form
+  // Toggles ONLY the contact form
   function toggleForm() {
     const form = document.getElementById('form-content');
-    form.style.display =
-      (form.style.display === 'none' || form.style.display === '') 
-        ? 'block' 
-        : 'none';
+    if (form.style.display === 'none' || form.style.display === '') {
+      form.style.display = 'block';
+    } else {
+      form.style.display = 'none';
+    }
   }
 </script>
 
