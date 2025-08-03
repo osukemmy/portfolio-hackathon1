@@ -133,17 +133,22 @@
 
 <script>
   function toggleSection(id) {
-    // Hide all sections first
     const allSections = document.querySelectorAll('main section div');
+
     allSections.forEach(div => {
       if (div.id !== id) {
-        div.style.display = "none";
+        div.classList.remove('show'); // Hide others
       }
     });
 
-    // Toggle the clicked section
     const section = document.getElementById(id);
-    section.style.display = (section.style.display === "none" || section.style.display === "") ? "block" : "none";
+
+    // Toggle 'show' class to open/close with animation
+    if (section.classList.contains('show')) {
+      section.classList.remove('show');
+    } else {
+      section.classList.add('show');
+    }
   }
 </script>
 
