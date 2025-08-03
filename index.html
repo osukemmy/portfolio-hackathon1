@@ -12,12 +12,12 @@
     <h1>Kemunto Ruth Osoro</h1>
     <nav>
       <ul>
-        <li><a href="#languages">Programming Languages</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="toggleSection('languages-content')">Programming Languages</button></li>
+        <li><button onclick="toggleSection('about-content')">About Me</button></li>
+        <li><button onclick="toggleSection('education-content')">Education</button></li>
+        <li><button onclick="toggleSection('interests-content')">Interests</button></li>
+        <li><button onclick="toggleSection('projects-content')">Projects</button></li>
+        <li><button onclick="toggleSection('contact-content')">Contact</button></li>
       </ul>
     </nav>
   </header>
@@ -26,73 +26,85 @@
 
     <!-- Programming Languages & Skills -->
     <section id="languages">
-      <h2>Programming Languages & Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python (Beginner)</li>
-        <li>Go (Zone 01 Training)</li>
-        <li>Tools: Git & GitHub, VS Code, Live Server, Linux Terminal, Kahoot, TED-Ed, Quizizz, Canva, Zoom, Google Workspace</li>
-        <li>Skills: Curriculum planning, Data collection, Research, Content writing, Project management</li>
-      </ul>
+      <div id="languages-content" style="display: none;">
+        <h2>Programming Languages & Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Python (Beginner)</li>
+          <li>Go (Zone 01 Training)</li>
+          <li>Tools: Git & GitHub, VS Code, Live Server, Linux Terminal, Kahoot, TED-Ed, Quizizz, Canva, Zoom, Google Workspace</li>
+          <li>Skills: Curriculum planning, Data collection, Research, Content writing, Project management</li>
+        </ul>
+      </div>
     </section>
 
     <!-- About Me -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am Kemunto Ruth Osoro, a TSC-registered educator and content creator passionate about student-centered learning and global education.
-        My experience spans teaching, research, curriculum development, and content writing, with a growing focus on technology and international education.
-        I am currently expanding my skills in web development and software engineering.
-      </p>
+      <div id="about-content" style="display: none;">
+        <h2>About Me</h2>
+        <p>
+          I am Kemunto Ruth Osoro, a TSC-registered educator and content creator passionate about student-centered learning and global education.
+          My experience spans teaching, research, curriculum development, and content writing, with a growing focus on technology and international education.
+          I am currently expanding my skills in web development and software engineering.
+        </p>
+      </div>
     </section>
 
     <!-- Educational Background -->
     <section id="education">
-      <h2>Educational Background</h2>
-      <ul>
-        <li><strong>Bachelor of Education (Arts)</strong> – Kiswahili & Geography, Moi University (2023)</li>
-        <li><strong>Certificate in Teaching International Curriculum (CTIC)</strong> – Riara University (April 2025 Cohort)</li>
-        <li><strong>Software Engineering</strong> – Power Learn Project (Ongoing)</li>
-      </ul>
-      <p>Certifications: Child Protection & Safeguarding, Asana Workflow Specialist</p>
-      <a href="CV.pdf" download>Download My CV</a>
+      <div id="education-content" style="display: none;">
+        <h2>Educational Background</h2>
+        <ul>
+          <li><strong>Bachelor of Education (Arts)</strong> – Kiswahili & Geography, Moi University (2023)</li>
+          <li><strong>Certificate in Teaching International Curriculum (CTIC)</strong> – Riara University (April 2025 Cohort)</li>
+          <li><strong>Software Engineering</strong> – Power Learn Project (Ongoing)</li>
+        </ul>
+        <p>Certifications: Child Protection & Safeguarding, Asana Workflow Specialist</p>
+        <a href="CV.pdf" download>Download My CV</a>
+      </div>
     </section>
 
     <!-- Interests -->
     <section id="interests">
-      <h2>Interests</h2>
-      <p>
-        I am passionate about technology in education, web development, innovative teaching strategies,
-        international education systems, and research on curriculum and learning outcomes.
-      </p>
+      <div id="interests-content" style="display: none;">
+        <h2>Interests</h2>
+        <p>
+          I am passionate about technology in education, web development, innovative teaching strategies,
+          international education systems, and research on curriculum and learning outcomes.
+        </p>
+      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Online Tutoring:</strong> Designed and delivered engaging Kiswahili and English lessons for international learners using interactive tools.</li>
-        <li><strong>Research Work:</strong> Contributed to studies at APHRC and Quiben Ventures, collecting and analyzing data on learning, aspirations, and mental health.</li>
-        <li><strong>Content Writing:</strong> Developed digital toolkits and blogs as a Content & Research Intern at Global Student Solutions.</li>
-      </ul>
+      <div id="projects-content" style="display: none;">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Online Tutoring:</strong> Designed and delivered engaging Kiswahili and English lessons for international learners using interactive tools.</li>
+          <li><strong>Research Work:</strong> Contributed to studies at APHRC and Quiben Ventures, collecting and analyzing data on learning, aspirations, and mental health.</li>
+          <li><strong>Content Writing:</strong> Developed digital toolkits and blogs as a Content & Research Intern at Global Student Solutions.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+      <div id="contact-content" style="display: none;">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea><br>
 
-        <button type="submit">Send</button>
-      </form>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
 
   </main>
@@ -100,6 +112,13 @@
   <footer>
     <p>&copy; 2025 Kemunto Ruth Osoro. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.style.display = (section.style.display === "none") ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
