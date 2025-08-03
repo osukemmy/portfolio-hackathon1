@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <!-- Contact -->
+   <!-- Contact -->
 <section id="contact">
   <div id="contact-content">
     <h2>Contact Me</h2>
@@ -107,8 +107,9 @@
     <p><strong>Email:</strong> ruthosoro2@gmail.com</p>
     <p><strong>Phone:</strong> +254795123988</p>
 
-    <button onclick="toggleSection('form-content')">Open Form</button>
-    <div id="form-content">
+    <!-- Button to toggle the form -->
+    <button type="button" onclick="toggleForm()">Open Form</button>
+    <div id="form-content" style="display:none;">
       <form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br>
@@ -123,13 +124,13 @@
       </form>
     </div>
   </div>
-</section>
+</section>  
 
-  </main>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Kemunto Ruth Osoro. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Kemunto Ruth Osoro. All rights reserved.</p>
+</footer>
 
 <script>
   function toggleSection(id) {
@@ -150,7 +151,17 @@
       section.classList.add('show');
     }
   }
+
+  // New function for toggling the contact form
+  function toggleForm() {
+    const form = document.getElementById('form-content');
+    form.style.display =
+      (form.style.display === 'none' || form.style.display === '') 
+        ? 'block' 
+        : 'none';
+  }
 </script>
 
 </body>
 </html>
+ 
