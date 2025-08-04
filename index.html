@@ -22,22 +22,22 @@
     </nav>
   </header>
 
-      <!-- Hero / Landing Section -->
-    <section id="hero">
-      <div class="hero-content">
-        <h2>Welcome to My Portfolio</h2>
-        <p>
-          Explore my journey as an educator and budding software developer.
-          Use the navigation above to view my skills, education, projects, and interests.
-        </p>
-      </div>
-    </section>
+  <!-- Hero / Landing Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Portfolio</h2>
+      <p>
+        Explore my journey as an educator and budding software developer.
+        Use the navigation above to view my skills, education, projects, and interests.
+      </p>
+    </div>
+  </section>
 
   <main>
 
     <!-- Programming Languages & Skills -->
     <section id="languages">
-      <div id="languages-content">
+      <div id="languages-content" style="display:none;">
         <h2>Programming Languages & Skills</h2>
         <ul>
           <li>HTML</li>
@@ -52,7 +52,7 @@
 
     <!-- About Me -->
     <section id="about">
-      <div id="about-content">
+      <div id="about-content" style="display:none;">
         <h2>About Me</h2>
         <p>
           I am Kemunto Ruth Osoro, a TSC-registered educator and content creator passionate about student-centered learning and global education.
@@ -64,7 +64,7 @@
 
     <!-- Educational Background -->
     <section id="education">
-      <div id="education-content">
+      <div id="education-content" style="display:none;">
         <h2>Educational Background</h2>
         <ul>
           <li><strong>Bachelor of Education (Arts)</strong> – Kiswahili & Geography, Moi University (2023)</li>
@@ -78,7 +78,7 @@
 
     <!-- Interests -->
     <section id="interests">
-      <div id="interests-content">
+      <div id="interests-content" style="display:none;">
         <h2>Interests</h2>
         <p>
           I am passionate about technology in education, web development, innovative teaching strategies,
@@ -89,7 +89,7 @@
 
     <!-- Projects -->
     <section id="projects">
-      <div id="projects-content">
+      <div id="projects-content" style="display:none;">
         <h2>Projects</h2>
         <ul>
           <li><strong>Online Tutoring:</strong> Designed and delivered engaging Kiswahili and English lessons for international learners using interactive tools.</li>
@@ -99,67 +99,58 @@
       </div>
     </section>
 
- <!-- Contact -->
-<section id="contact">
-  <div id="contact-content">
-    <h2>Contact Me</h2>
-    <p><strong>Name:</strong> Ruth Osoro</p>
-    <p><strong>Email:</strong> ruthosoro2@gmail.com</p>
-    <p><strong>Phone:</strong> +254795123988</p>
+    <!-- Contact -->
+    <section id="contact">
+      <div id="contact-content" style="display:none;">
+        <h2>Contact Me</h2>
+        <p><strong>Name:</strong> Ruth Osoro</p>
+        <p><strong>Email:</strong> ruthosoro2@gmail.com</p>
+        <p><strong>Phone:</strong> +254795123988</p>
 
-    <!-- Button to toggle the form -->
-    <button type="button" onclick="toggleForm()">Open Form</button>
+        <!-- Contact form is directly visible here -->
+        <div id="form-content" style="display:block; margin-top:15px;">
+          <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-    <!-- The form is hidden by default using CSS -->
-    <div id="form-content">
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </div>
-</section>
-</main>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Kemunto Ruth Osoro. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Kemunto Ruth Osoro. All rights reserved.</p>
+  </footer>
 
-<script>
-  // Toggles main sections
-  function toggleSection(id) {
-    const allSections = document.querySelectorAll('main section div');
+  <script>
+    // Show one section and hide others
+    function toggleSection(id) {
+      const allSections = document.querySelectorAll('main section div');
 
-    allSections.forEach(div => {
-      if (div.id !== id) {
-        div.classList.remove('show'); // Hide others
+      allSections.forEach(div => {
+        if (div.id !== id) {
+          div.style.display = "none";
+        }
+      });
+
+      const section = document.getElementById(id);
+
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
       }
-    });
-
-    const section = document.getElementById(id);
-
-    if (section.classList.contains('show')) {
-      section.classList.remove('show');
-    } else {
-      section.classList.add('show');
     }
-  }
-
-  // Toggles ONLY the contact form
-function toggleForm() {
-  const form = document.getElementById('form-content');
-  form.classList.toggle('show');
-}
-
-</script>
+  </script>
 
 </body>
 </html>
